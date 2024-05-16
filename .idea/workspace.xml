@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4e7aa40f-5c8f-43ec-aef7-4185fc666e75" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/brush/Brush.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/BrushState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/EllipseDrawingState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/LineDrawingState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/RectangleDrawingState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/SelectState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/CanvasModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/AbstractShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/EllipseShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/LineShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/RectangleShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/ShapeInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/ShapeSelectionComposite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/factory/EllipseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/factory/LineFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/factory/RectangleFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/factory/ShapeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/CanvasView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/PropertyPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/WindowView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/gui/BrushSelectButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/gui/RectangleDrawButton.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2enwZxCo9X6UkWOCCfpP2l7Mx3T" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="COSE457-graphic-editor.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="애플리케이션.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="4e7aa40f-5c8f-43ec-aef7-4185fc666e75" name="변경" comment="" />
+      <created>1712553713537</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712553713537</updated>
+      <workItem from="1712553714338" duration="1103000" />
+      <workItem from="1712909473899" duration="388000" />
+      <workItem from="1713202642705" duration="381000" />
+      <workItem from="1713421594199" duration="190000" />
+      <workItem from="1713788898821" duration="1064000" />
+      <workItem from="1715407062177" duration="45013000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
