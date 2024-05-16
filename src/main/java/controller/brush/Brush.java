@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 
 // Brush의 책임: Mouse Event에 다라 Shape 속성 변경 / 추가
-public abstract class Brush extends BrushState {
+public class Brush  {
 
     private Color color = new Color(0,0,0);
     private BrushState state;
@@ -40,6 +40,7 @@ public abstract class Brush extends BrushState {
 
     public void handleMouseDrag(MouseEvent e){
         state.handleMouseDrag(e, color);
+        canvasModel.notifyObservers();
     }
 
 }

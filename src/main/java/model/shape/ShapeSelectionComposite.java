@@ -88,7 +88,7 @@ public class ShapeSelectionComposite implements ShapeInterface, Iterable<ShapeIn
     @Override
     public String getY() {
 
-        if(shapes.size() == 1) return shapes.get(0).getY()$;
+        if(shapes.size() == 1) return shapes.get(0).getY();
         return "";
     }
 

@@ -4,45 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e7aa40f-5c8f-43ec-aef7-4185fc666e75" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/brush/Brush.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/BrushState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/EllipseDrawingState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/LineDrawingState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/RectangleDrawingState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/SelectState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/CanvasModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/AbstractShape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/EllipseShape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/LineShape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/RectangleShape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/ShapeInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/ShapeSelectionComposite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/factory/EllipseFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/factory/LineFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/factory/RectangleFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/factory/ShapeFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/CanvasView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/PropertyPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/WindowView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/gui/BrushSelectButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/gui/RectangleDrawButton.java" afterDir="false" />
+    <list default="true" id="4e7aa40f-5c8f-43ec-aef7-4185fc666e75" name="변경" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/brush/Brush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/brush/Brush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/shape/ShapeSelectionComposite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/shape/ShapeSelectionComposite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,23 +41,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "모듈",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -126,11 +91,24 @@
       <workItem from="1713202642705" duration="381000" />
       <workItem from="1713421594199" duration="190000" />
       <workItem from="1713788898821" duration="1064000" />
-      <workItem from="1715407062177" duration="45013000" />
+      <workItem from="1715407062177" duration="46391000" />
+      <workItem from="1715839778883" duration="189000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1715837897666</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715837897666</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
