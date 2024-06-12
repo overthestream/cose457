@@ -1,8 +1,10 @@
 package model.command;
 
 public interface Command {
-    void undo();
+    default void undo(){};
     void execute();
 
-    boolean isUndoable();
+    default boolean isUndoable(){
+        return false;
+    };
 }

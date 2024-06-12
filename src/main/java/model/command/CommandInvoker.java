@@ -1,5 +1,7 @@
 package model.command;
 
+import model.CanvasModel;
+
 import java.util.Stack;
 
 public class CommandInvoker {
@@ -25,20 +27,20 @@ public class CommandInvoker {
         undoHistory.clear();
     }
 
-    public void undo(){
+    public void undo(CanvasModel canvasModel){
         if(!isUndoable()) return;
         Command command = executeHistory.pop();
-        UndoCommand undoCommand = new UndoCommand(command);
+        UndoCommand undoCommand = new UndoCommand(canvasModel, command);
 
         undoCommand.execute();
         undoHistory.push(undoCommand);
 
     }
 
-    public void redo(){
+    public void redo(CanvasModel canvasModel){
         if(!isRedoable()) return;
         UndoCommand undoCommand = undoHistory.pop();
-        UndoCommand redoCommand = new UndoCommand(undoCommand);
+        UndoCommand redoCommand = new UndoCommand(canvasModel, undoCommand);
         redoCommand.execute();
         executeHistory.push(redoCommand);
     }

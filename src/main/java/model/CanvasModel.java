@@ -5,7 +5,10 @@ import model.shape.ShapeSelectionComposite;
 import view.Observer;
 
 import java.awt.*;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Base64;
+import java.util.List;
 
 public class CanvasModel  implements Subject{
     private ShapeSelectionComposite shapeSelection = new ShapeSelectionComposite();
@@ -25,6 +28,12 @@ public class CanvasModel  implements Subject{
 
     public void moveSelectedShapes(int dx, int dy){
         this.shapeSelection.move(dx, dy);
+        notifyObservers();
+    }
+
+    public void resize(int width, int height){
+        this.shapeSelection.setWidth(width);
+        this.shapeSelection.setHeight(height);
         notifyObservers();
     }
 
@@ -93,9 +102,32 @@ public class CanvasModel  implements Subject{
         notifyObservers();
     }
 
-    public void removeShape(ShapeInterface shapeInterface) {
-        shapeList.remove(shapeInterface);
-        notifyObservers();
+    public String backup() {
+        try {
+
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            ObjectOutputStream oos = new ObjectOutputStream(baos);
+            oos.writeObject(this.shapeList);
+            oos.close();
+            return Base64.getEncoder().encodeToString(baos.toByteArray());
+        } catch (IOException e) {
+            return "";
+        }
+    }
+
+    public void restore(String state) {
+        try {
+            byte[] data = Base64.getDecoder().decode(state);
+            ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(data));
+            this.shapeList = (ArrayList<ShapeInterface>) ois.readObject();
+            ois.close();
+            notifyObservers();
+        } catch (ClassNotFoundException e) {
+            System.out.print("ClassNotFoundException occurred.");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.print("IOException occurred.");
+        }
     }
 }
 

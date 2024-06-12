@@ -2,24 +2,12 @@ package model.command;
 
 import model.CanvasModel;
 
-public class BringToFrontCommand implements Command{
-    CanvasModel canvasModel;
+public class BringToFrontCommand extends UndoableCommand{
     public BringToFrontCommand(CanvasModel canvasModel){
-        this.canvasModel= canvasModel;
+        super(canvasModel);
     }
-
     @Override
-    public void undo() {
-
-    }
-
-    @Override
-    public void execute() {
+    public void doExecute() {
         canvasModel.bringSelectedToFront();
-    }
-
-    @Override
-    public boolean isUndoable() {
-        return true;
     }
 }

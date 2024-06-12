@@ -3,28 +3,15 @@ package model.command;
 import model.CanvasModel;
 import model.shape.ShapeInterface;
 
-public class ResizeCommand implements Command {
-    CanvasModel canvasModel;
+public class ResizeCommand extends UndoableCommand {
     int width, height;
     public ResizeCommand( CanvasModel canvasModel, int width, int height){
-        this.canvasModel=canvasModel;
+        super(canvasModel);
         this.width=width;
         this.height=height;
     }
     @Override
-    public void undo() {
-        canvasModel.notifyObservers();;
-    }
-
-    @Override
-    public void execute() {
-        canvasModel.getShapeSelection().setWidth(width);
-        canvasModel.getShapeSelection().setHeight(height);
-        canvasModel.notifyObservers();;
-    }
-
-    @Override
-    public boolean isUndoable() {
-        return true;
+    public void doExecute() {
+        this.canvasModel.resize(width, height);
     }
 }

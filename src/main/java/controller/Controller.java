@@ -69,10 +69,10 @@ public class Controller extends MouseAdapter {
     }
 
     public void undo(){
-        CommandInvoker.getInstance().undo();
+        CommandInvoker.getInstance().undo(canvasModel);
     }
     public void redo() {
-        CommandInvoker.getInstance().redo();
+        CommandInvoker.getInstance().redo(canvasModel);
     }
 
 }

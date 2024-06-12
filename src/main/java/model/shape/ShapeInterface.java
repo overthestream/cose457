@@ -1,8 +1,9 @@
 package model.shape;
 
 import java.awt.*;
+import java.io.Serializable;
 
-public interface ShapeInterface {
+public interface ShapeInterface  extends Serializable {
     void draw(Graphics2D g2);
     void move(int dx, int dy);
     void setColor(Color color);

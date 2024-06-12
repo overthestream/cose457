@@ -1,25 +1,18 @@
 package model.command;
 
-public class UndoCommand implements Command {
+import model.CanvasModel;
+
+public class UndoCommand extends UndoableCommand {
 
     private Command undidCommand;
 
-    public UndoCommand(Command command) {
+    public UndoCommand(CanvasModel canvasModel, Command command) {
+        super(canvasModel);
         this.undidCommand=command;
     }
 
     @Override
-    public void undo() {
-        undidCommand.execute();
-    }
-
-    @Override
-    public void execute() {
+    public void doExecute() {
         undidCommand.undo();
-    }
-
-    @Override
-    public boolean isUndoable(){
-        return true;
     }
 }

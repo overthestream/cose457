@@ -2,25 +2,14 @@ package model.command;
 
 import model.CanvasModel;
 
-public class SendToBackCommand implements Command{
-    CanvasModel canvasModel;
+public class SendToBackCommand extends UndoableCommand {
     public SendToBackCommand(CanvasModel canvasModel){
-        this.canvasModel= canvasModel;
+        super(canvasModel);
     }
-
     @Override
-    public void undo() {
-
-    }
-
-    @Override
-    public void execute() {
+    public void doExecute() {
         canvasModel.sendSelectedToBack();
     }
 
-    @Override
-    public boolean isUndoable() {
-        return true;
-    }
 }
 

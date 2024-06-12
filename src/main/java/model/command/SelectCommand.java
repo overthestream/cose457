@@ -16,16 +16,7 @@ public class SelectCommand implements Command {
     }
 
     @Override
-    public void undo() {
-    }
-
-    @Override
     public void execute() {
         canvasModel.selectShape(x, y);
-    }
-
-    @Override
-    public boolean isUndoable() {
-        return false;
     }
 }
