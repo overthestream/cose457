@@ -68,6 +68,11 @@ public class Controller extends MouseAdapter {
         CommandInvoker.getInstance().executeCommand(resizeCommand);
     }
 
+    public void decorateShadow(){
+        ShadowDecorateCommand shadowDecorateCommand = new ShadowDecorateCommand(canvasModel);
+        CommandInvoker.getInstance().executeCommand(shadowDecorateCommand);
+    }
+
     public void undo(){
         CommandInvoker.getInstance().undo(canvasModel);
     }

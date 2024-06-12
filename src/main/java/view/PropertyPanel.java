@@ -50,6 +50,11 @@ public class PropertyPanel extends JPanel implements Observer {
             controller.redo();
         });
 
+        JButton shadowButton = new JButton("Shadow");
+        shadowButton.addActionListener(e -> {
+            controller.decorateShadow();
+        });
+
         GroupLayout layout = new GroupLayout(this);
         this.setLayout(layout);
         layout.setAutoCreateGaps(true);
@@ -71,7 +76,8 @@ public class PropertyPanel extends JPanel implements Observer {
                                 .addComponent(resizeApplyButton)
                                 .addGroup(layout.createSequentialGroup()
                                         .addComponent(undoButton)
-                                        .addComponent(redoButton)))
+                                        .addComponent(redoButton))
+                                .addComponent(shadowButton))
         );
 
         layout.setVerticalGroup(
@@ -93,6 +99,7 @@ public class PropertyPanel extends JPanel implements Observer {
                         .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                 .addComponent(undoButton)
                                 .addComponent(redoButton))
+                        .addComponent(shadowButton)
         );
     }
     @Override

@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e7aa40f-5c8f-43ec-aef7-4185fc666e75" name="변경" comment="command pattern">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Memento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/UndoableCommand.java" afterDir="false" />
+    <list default="true" id="4e7aa40f-5c8f-43ec-aef7-4185fc666e75" name="변경" comment="Memento pattern">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/ShadowDecorateCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/ShadowShapeDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/shape/ShapeDecorator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/CanvasModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/CanvasModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/BringToFrontCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/command/BringToFrontCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/CommandInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/command/CommandInvoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/DrawCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/command/DrawCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/MoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/command/MoveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/ResizeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/command/ResizeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/SelectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/command/SelectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/SendToBackCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/command/SendToBackCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/UndoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/command/UndoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/shape/ShapeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/shape/ShapeInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/shape/ShapeSelectionComposite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/shape/ShapeSelectionComposite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/PropertyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/PropertyPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -106,7 +99,7 @@
       <workItem from="1715407062177" duration="46391000" />
       <workItem from="1715839778883" duration="3014000" />
       <workItem from="1717838441838" duration="868000" />
-      <workItem from="1718013440036" duration="23745000" />
+      <workItem from="1718013440036" duration="26120000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1715837897666</created>
@@ -129,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718202992810</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Memento pattern">
+      <created>1718213712222</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718213712222</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="command pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="command pattern" />
+    <MESSAGE value="Memento pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="Memento pattern" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 package model;
 
+import model.shape.ShadowShapeDecorator;
 import model.shape.ShapeInterface;
 import model.shape.ShapeSelectionComposite;
 import view.Observer;
@@ -104,10 +105,10 @@ public class CanvasModel  implements Subject{
 
     public String backup() {
         try {
-
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             ObjectOutputStream oos = new ObjectOutputStream(baos);
             oos.writeObject(this.shapeList);
+            oos.writeObject(this.shapeSelection);
             oos.close();
             return Base64.getEncoder().encodeToString(baos.toByteArray());
         } catch (IOException e) {
@@ -120,6 +121,7 @@ public class CanvasModel  implements Subject{
             byte[] data = Base64.getDecoder().decode(state);
             ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(data));
             this.shapeList = (ArrayList<ShapeInterface>) ois.readObject();
+            this.shapeSelection = (ShapeSelectionComposite) ois.readObject();
             ois.close();
             notifyObservers();
         } catch (ClassNotFoundException e) {
@@ -128,6 +130,11 @@ public class CanvasModel  implements Subject{
             e.printStackTrace();
             System.out.print("IOException occurred.");
         }
+    }
+
+    public void decorateShadow(){
+        this.shapeList.replaceAll(shape -> shapeSelection.getShapes().contains(shape) ? new ShadowShapeDecorator(shape) : shape);
+        notifyObservers();
     }
 }
 
