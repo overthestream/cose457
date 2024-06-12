@@ -13,6 +13,10 @@ public class ShapeSelectionComposite implements ShapeInterface, Iterable<ShapeIn
         return shapes;
     }
 
+    public void removeAll(){
+        shapes.clear();
+    }
+
     public void selectShape(ShapeInterface shape){
         if(shapes.contains(shape)) {
             shape.setColor(Color.black);
@@ -71,11 +75,14 @@ public class ShapeSelectionComposite implements ShapeInterface, Iterable<ShapeIn
 
     @Override
     public void setWidth(int width) {
+        if(shapes.size() == 1) shapes.get(0).setWidth(width);
 
     }
 
     @Override
     public void setHeight(int height) {
+        if(shapes.size() == 1) shapes.get(0).setHeight(height);
+
     }
 
     @Override

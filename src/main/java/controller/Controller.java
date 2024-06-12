@@ -3,6 +3,7 @@ package controller;
 import controller.brush.Brush;
 import controller.brush.state.BrushState;
 import model.CanvasModel;
+import model.command.*;
 import view.WindowView;
 
 import java.awt.*;
@@ -44,12 +45,34 @@ public class Controller extends MouseAdapter {
     public void mouseDragged(MouseEvent e){
         brush.handleMouseDrag(e);
     }
-
     public void bringSelectedToFront() {
-        canvasModel.bringSelectedToFront();
+
+
+        BringToFrontCommand bringToFrontCommand = new BringToFrontCommand(canvasModel);
+        CommandInvoker.getInstance().executeCommand(bringToFrontCommand);
     }
 
     public void sendSelectedToBack() {
-        canvasModel.sendSelectedToBack();
+
+        SendToBackCommand sendToBackCommand = new SendToBackCommand(canvasModel);
+        CommandInvoker.getInstance().executeCommand(sendToBackCommand);
     }
+
+    public void move(int x, int y){
+        MoveCommand moveCommand = new MoveCommand(canvasModel, x, y);
+        CommandInvoker.getInstance().executeCommand(moveCommand);
+    }
+
+    public void resize(int width, int height) {
+        ResizeCommand resizeCommand = new ResizeCommand(canvasModel, width, height);
+        CommandInvoker.getInstance().executeCommand(resizeCommand);
+    }
+
+    public void undo(){
+        CommandInvoker.getInstance().undo();
+    }
+    public void redo() {
+        CommandInvoker.getInstance().redo();
+    }
+
 }

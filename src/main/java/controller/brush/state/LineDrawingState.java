@@ -1,6 +1,8 @@
 package controller.brush.state;
 
 import model.CanvasModel;
+import model.command.CommandInvoker;
+import model.command.LineDrawCommand;
 import model.shape.LineShape;
 import model.shape.factory.LineFactory;
 
@@ -24,11 +26,8 @@ public class LineDrawingState extends BrushState{
     public void handleMouseUp(MouseEvent e, Color color) {
         int x2 = e.getX();
         int y2 = e.getY();
-
-        LineShape lineShape= LineFactory
-                .getInstance()
-                .createShape(x1, y1, x2, y2,color);
-        canvasModel.addShape(lineShape);
+        LineDrawCommand lineDrawCommand =new LineDrawCommand(canvasModel, x1, y1, x2, y2, color);
+        CommandInvoker.getInstance().executeCommand(lineDrawCommand);
     }
     @Override
     public void handleMouseClick(MouseEvent e, Color color){};

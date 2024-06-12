@@ -1,6 +1,8 @@
 package controller.brush.state;
 
 import model.CanvasModel;
+import model.command.CommandInvoker;
+import model.command.RectangleDrawCommand;
 import model.shape.RectangleShape;
 import model.shape.factory.RectangleFactory;
 
@@ -25,10 +27,8 @@ public class RectangleDrawingState extends  BrushState{
         int x2 = e.getX();
         int y2 = e.getY();
 
-        RectangleShape rectangleShape= RectangleFactory
-                .getInstance()
-                .createShape(x1, y1, x2, y2,color);
-        canvasModel.addShape(rectangleShape);
+        RectangleDrawCommand rectangleDrawCommand = new RectangleDrawCommand(canvasModel, x1, y1, x2, y2 ,color);
+        CommandInvoker.getInstance().executeCommand(rectangleDrawCommand);
     }
     @Override
     public void handleMouseClick(MouseEvent e, Color color){};

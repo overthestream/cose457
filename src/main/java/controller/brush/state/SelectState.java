@@ -1,6 +1,9 @@
 package controller.brush.state;
 
 import model.CanvasModel;
+import model.command.CommandInvoker;
+import model.command.MoveCommand;
+import model.command.SelectCommand;
 import model.shape.ShapeInterface;
 
 import java.awt.*;
@@ -21,14 +24,8 @@ public class SelectState extends BrushState {
         int x = e.getX();
         int y = e.getY();
 
-        ShapeInterface shape = canvasModel.getShapeAtPoint(x, y);
-        if(shape == null) {
-            canvasModel.clearSelection();
-            return;
-        }
-        shape.setColor(Color.blue);
-        canvasModel.selectShape(shape);
-
+        SelectCommand selectCommand = new SelectCommand(canvasModel, x, y);
+        CommandInvoker.getInstance().executeCommand(selectCommand);
     };
     @Override
     public void handleMouseUp(MouseEvent e, Color color) {
@@ -37,10 +34,8 @@ public class SelectState extends BrushState {
     @Override
     public void handleMouseDrag(MouseEvent e, Color color) {
 
-        int dx= e.getX() - mouseStartX;
-        int dy = e.getY()-mouseStartY;
-
-        canvasModel.getShapeSelection().move(dx, dy);
+        MoveCommand moveCommand = new MoveCommand(canvasModel, mouseStartX, mouseStartY, e.getX(), e.getY());
+        CommandInvoker.getInstance().executeCommand(moveCommand);
         mouseStartX = e.getX();
         mouseStartY=e.getY();
     }

@@ -8,9 +8,8 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class CanvasModel  implements Subject{
-    private ShapeSelectionComposite shapeSelection;
+    private ShapeSelectionComposite shapeSelection = new ShapeSelectionComposite();
     public  CanvasModel(){
-        clearSelection();
     }
 
     private ArrayList<ShapeInterface> shapeList = new ArrayList<>();
@@ -24,8 +23,12 @@ public class CanvasModel  implements Subject{
         return shapeSelection;
     }
 
-    // chain of responsibility?
-    public ShapeInterface getShapeAtPoint(int x, int y) {
+    public void moveSelectedShapes(int dx, int dy){
+        this.shapeSelection.move(dx, dy);
+        notifyObservers();
+    }
+
+    private ShapeInterface getShapeAtPoint(int x, int y) {
         for(ShapeInterface shape : shapeList){
             if(shape.contains(x, y)) return shape;
         }
@@ -43,20 +46,28 @@ public class CanvasModel  implements Subject{
     public void sendSelectedToBack() {
         for(ShapeInterface shape : shapeSelection){
             shapeList.remove(shape);
-            shapeList.add( shape);
+            shapeList.add(shape);
         }
         notifyObservers();
     }
 
-    public void selectShape(ShapeInterface shape){
-        this.shapeSelection.selectShape(shape);
+    public void selectShape(int x, int y){
+        ShapeInterface shape = getShapeAtPoint(x, y);
+        if(shape == null) {
+            clearSelection();
+        }
+        else {
+            shape.setColor(Color.blue);
+            this.shapeSelection.selectShape(shape);
+        }
         notifyObservers();
     }
 
-    public void clearSelection(){
-        for(ShapeInterface shape : shapeList) shape.setColor(Color.black);
-        this.shapeSelection=new ShapeSelectionComposite();
-        notifyObservers();
+
+
+    private void clearSelection(){
+        shapeSelection.setColor(Color.black);
+        this.shapeSelection.removeAll();
     }
 
 
@@ -79,6 +90,11 @@ public class CanvasModel  implements Subject{
 
     public void addShape(ShapeInterface shapeInterface){
         shapeList.add(shapeInterface);
+        notifyObservers();
+    }
+
+    public void removeShape(ShapeInterface shapeInterface) {
+        shapeList.remove(shapeInterface);
         notifyObservers();
     }
 }

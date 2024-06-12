@@ -5,9 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e7aa40f-5c8f-43ec-aef7-4185fc666e75" name="변경" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/BringToFrontCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/CommandInvoker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/DrawCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/EllipseDrawCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/LineDrawCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/MoveCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/RectangleDrawCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/ResizeCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/SelectCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/SendToBackCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/command/UndoCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/brush/Brush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/brush/Brush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/brush/state/EllipseDrawingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/EllipseDrawingState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/brush/state/LineDrawingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/LineDrawingState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/brush/state/RectangleDrawingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/RectangleDrawingState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/brush/state/SelectState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/brush/state/SelectState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/CanvasModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/CanvasModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/shape/ShapeSelectionComposite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/shape/ShapeSelectionComposite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/PropertyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/PropertyPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/WindowView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/WindowView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/BrushSelectButton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/RectangleDrawButton.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -92,7 +114,9 @@
       <workItem from="1713421594199" duration="190000" />
       <workItem from="1713788898821" duration="1064000" />
       <workItem from="1715407062177" duration="46391000" />
-      <workItem from="1715839778883" duration="189000" />
+      <workItem from="1715839778883" duration="3014000" />
+      <workItem from="1717838441838" duration="868000" />
+      <workItem from="1718013440036" duration="18402000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1715837897666</created>
@@ -101,11 +125,29 @@
       <option name="project" value="LOCAL" />
       <updated>1715837897666</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit">
+      <created>1715840812799</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715840812799</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />

@@ -1,6 +1,8 @@
 package controller.brush.state;
 
 import model.CanvasModel;
+import model.command.CommandInvoker;
+import model.command.EllipseDrawCommand;
 import model.shape.EllipseShape;
 import model.shape.factory.EllipseFactory;
 
@@ -26,10 +28,8 @@ public class EllipseDrawingState extends BrushState{
         int x2 = e.getX();
         int y2 = e.getY();
 
-        EllipseShape ellipseShape = EllipseFactory
-                .getInstance()
-                .createShape(x1, y1, x2, y2,color);
-        canvasModel.addShape(ellipseShape);
+        EllipseDrawCommand ellipseDrawCommand = new EllipseDrawCommand(canvasModel, x1, y1, x2, y2, color);
+        CommandInvoker.getInstance().executeCommand(ellipseDrawCommand);
     }
     @Override
     public void handleMouseClick(MouseEvent e, Color color){};

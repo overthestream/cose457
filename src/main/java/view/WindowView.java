@@ -12,7 +12,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class WindowView extends JFrame implements Observer {
+public class WindowView extends JFrame {
     private CanvasView canvasView;
     private CanvasModel canvasModel;
     private PropertyPanel propertyPanel;
@@ -20,7 +20,6 @@ public class WindowView extends JFrame implements Observer {
 
         canvasView = new CanvasView(canvasModel);
         this.canvasModel = canvasModel;
-        canvasModel.addObserver(this);
     }
 
 
@@ -29,7 +28,7 @@ public class WindowView extends JFrame implements Observer {
         setTitle("Graphic Editor");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        propertyPanel = new PropertyPanel(canvasView);
+        propertyPanel = new PropertyPanel(controller, canvasModel);
         add(propertyPanel, BorderLayout.EAST);
 
         JPanel buttonPanel = new JPanel();
@@ -69,10 +68,5 @@ public class WindowView extends JFrame implements Observer {
         this.add(canvasView, BorderLayout.CENTER);
 
         setVisible(true);
-    }
-
-    @Override
-    public void update() {
-        propertyPanel.setSelectedShape(canvasModel.getShapeSelection());
     }
 }
